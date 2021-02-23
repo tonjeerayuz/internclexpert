@@ -1,0 +1,39 @@
+<table id="table1" class="display" style="max-width:100%; ">
+    <thead>
+        <tr>
+            <th>
+                <app-CheckBoxCustom [isHeader]="true" (onChange)="onChangeChedcked($event)"></app-CheckBoxCustom>
+            </th>
+            <th>Customer Name</th>
+            <th>ID</th>
+            <th>Created</th>
+            <th>Email Address</th>
+            <th>Last Activity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let table of datatable; ">
+            <th>
+                <app-CheckBoxCustom [value]="table.Checked" ></app-CheckBoxCustom>
+            </th>
+            <td>{{table.CustomerName}}</td>
+            <td>{{table.Id}}</td>
+            <td>{{table.Created}}</td>
+            <td>{{table.EmailAdress}}</td>
+            <td>{{table.LastActivity}}</td>
+        </tr>
+       
+
+
+    </tbody>
+    <tfoot>
+        <!-- <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr> -->
+    </tfoot>
+</table>
